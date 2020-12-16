@@ -1,3 +1,10 @@
+# Path to your oh-my-bash installation.
+export OSH=$HOME/.oh-my-bash
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-bash is loaded.
+OSH_THEME="luan"
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -115,5 +122,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-alias config='/usr/bin/git --git-dir=/home/balah/.Dotfiles/ --work-tree=/home/balah'
+
+# Git configuration for the dot files 
 alias config='/usr/bin/git --git-dir=/home/balah/Dotfiles/ --work-tree=/home/balah'
+
+
+# User alias
+alias cdd='cd ..'
