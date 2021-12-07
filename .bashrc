@@ -111,8 +111,16 @@ alias phd='cd ~/Desktop/phd'
 # Alias for joplin
 alias jop='~/Desktop/Applications/Joplin-2.0.11.AppImage &'
 alias ant='~/Desktop/Applications/AntConc_64bit &'
-alias sleep='sudo systemctl suspend && ~/.config/i3/i3lock_test.sh'
+alias sleepPc='sudo systemctl suspend && ~/.config/i3/i3lock_test.sh'
 
 # Alias to setup my screen
 alias 2monl='xrandr --output DP-2 --primary --mode 1920x1200 --output eDP-1 --mode 1920x1080 --left-of DP-2'
 alias 1mon='xrandr --output eDP-1 --primary && xrandr --output DP-2 --off'
+
+
+# ESP-IDF
+alias get_idf='. $HOME/esp/esp-idf/export.sh'
+
+# Pulse Secure
+alias pulse_secure='$HOME/ps-pulse/opt/pulsesecure/bin/pulseUI'
+

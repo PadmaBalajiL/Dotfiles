@@ -34,7 +34,7 @@ bindsym $mod+c kill
 
 # Run dmenu
 #bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec "dmenu_run -nf '#21FF21' -nb '#5A0C34' -sb '#B12B0C' -sf '#EEE8DF' -fn 'monospace-10' -p 'Search ->'"
+bindsym $mod+d exec "rofi -show run"
 #bindsym $mod+d exec "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#005577' -sf '#EEEEEE' -fn 'monospace-10' -p 'Search ->'"
 # I3 lock shortcut 
 bindsym $mod+0 exec ~/.config/i3/i3lock_test.sh 
@@ -56,7 +56,7 @@ exec --no-startup-id picom -b --config ~/.config/compton/compton.conf --experime
 
 
 # Toggle keyboard layout
-# exec --no-startup-id "setxkbmap -layout us,ir -option 'grp:alt_shift_toggle'"
+exec_always setxkbmap -option caps:swapescape
 
 # Lockscreen
 # exec --no-startup-id ~/scripts/lock.sh
@@ -64,6 +64,9 @@ exec --no-startup-id picom -b --config ~/.config/compton/compton.conf --experime
 
 # network applet
 # exec --no-startup-id nm-applet &
+
+# Enable dropbox on startup
+exec /home/balah/.dropbox-dist/dropboxd & 
 
 # Enable num lock
 exec --no-startup-id numlockx on
@@ -184,14 +187,14 @@ set $small eDP-1
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 " 1.🦊 "
-set $ws2 " 2.💲 "
-set $ws3 " 3.📚 "
-set $ws4 " 4.✍  "
-set $ws5 " 5.🌄 "
-set $ws6 " 6.📬 "
+set $ws2 " 2.💯 "
+set $ws3 " 3.📑 "
+set $ws4 " 4.🖋 "
+set $ws5 " 5.🌄"
+set $ws6 " 6.📨 "
 set $ws7 " 7.🏢 "
-set $ws8 " 8.🌌 "
-set $ws9 " 9.🌋 "
+set $ws8 " 8.🌌"
+set $ws9 " 9.🌋"
 #set $ws10 "10"
 
 # Aliging workspaces
@@ -311,7 +314,7 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 client.background       #FFFFFF
 
 bar {
-	font pango:Source Sans Pro-10 16
+	font pango:Source Sans Pro-10 14
 		status_command i3blocks -c ~/.config/i3/i3blocks.conf
   colors {
     background #000000

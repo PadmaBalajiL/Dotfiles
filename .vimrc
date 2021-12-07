@@ -163,7 +163,7 @@ endif
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
-set conceallevel=1
+set conceallevel=0
 let g:tex_conceal='abdmg'
 
 " Snippet configurations
@@ -194,3 +194,4 @@ autocmd FileType tex inoremap ;fg \begin{figure}[h!]<CR>\caption{}<CR>\label{}<C
 autocmd FileType tex inoremap ;em \begin{}<CR><CR>\end{} 
 autocmd FileType tex inoremap ;ta \begin{table}[h!]<CR>\caption{}<CR>\label{}<CR>\end{table}<Esc>2k
 autocmd FileType tex inoremap ;tb \begin{tabular}{p{1cm}p{5cm}}<CR><CR>\end{tabular}<Esc>2k
+autocmd FileType tex inoremap ;fr \begin{frame}<CR> <CR> \end{frame}2k
